@@ -1,0 +1,39 @@
+// big button
+.big-btn {
+  color: $pearl-white;
+  background: #c82333;
+  border-color: #bd2130;
+  width: 100%;
+  border-radius: .25rem;
+  font-weight: 400;
+  text-align: center;
+  margin-bottom: $m-size;
+  padding: 1.4rem;
+}
+
+.big-btn:disabled {
+  opacity: .5;
+}
+
+// add option button
+.btn {
+  color: #fff;
+  background: #c82333;
+  border-color: #bd2130;
+  font-weight: 500;
+  border-radius: .25rem;
+  padding: $s-size;
+}
+
+.btn--link {
+  background: none;
+  border: none;
+  color: $pearl-white;
+  padding: 0;
+}
+
+@media (min-width: $desktop-breakpoint) {
+  .big-btn {
+    margin-bottom: $l-size;
+  }
+}

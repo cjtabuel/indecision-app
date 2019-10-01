@@ -1,0 +1,24 @@
+.header {
+  box-shadow: $shadow-lg;
+  background: $pearl-white;
+  padding: $m-size 0;
+  margin-bottom: $m-size;
+}
+
+.header__title {
+  font-size: $l-size;
+  margin: 0;
+}
+
+.header__subtitle {
+  color: $gray;
+  font-size: $m-size;
+  font-weight: 500;
+  margin: 0;
+}
+
+@media (min-width: $desktop-breakpoint) {
+  .header {
+    margin-bottom: $l-size;
+  }
+}
