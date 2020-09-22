@@ -1,30 +1,38 @@
-const path = require('path');
+const path = require('path')
 
 module.exports = {
-  entry: './src/app.js',
+  entry: {
+    index: ['babel-polyfill', './src/app.js']
+  },
   output: {
-    path: path.join(__dirname, 'public'),
-    filename: 'bundle.js'
+    path: path.resolve(__dirname, 'public/scripts'),
+    filename: '[name]-bundle.js'
   },
   module: {
-    rules: [
-      {
+    rules: [{
+      test: /\.js$/,
+      exclude: /node_modules/,
+      use: {
         loader: 'babel-loader',
-        test: /\.js$/,
-        exclude: /node_modules/
-      },
-      {
-        test: /\.s?css$/, 
-        use: [
-          'style-loader',
-          'css-loader',
-          'sass-loader'
-        ]
+        options: {
+          presets: [
+            '@babel/preset-env',
+            '@babel/preset-react'
+          ]
+        }
       }
-    ]
+    }, {
+      test: /\.s?css$/,
+      use: [
+        'style-loader', // inject styles into DOM
+        'css-loader', // compiles css into js
+        'sass-loader' // compiles sass into css
+      ]
+    }]
   },
-  devtool: 'cheap-module-eval-source-map',
   devServer: {
-    contentBase: path.join(__dirname, 'public')
-  }
-};
+    contentBase: path.resolve(__dirname, 'public'),
+    publicPath: '/scripts/'
+  },
+  devtool: 'source-map'
+}

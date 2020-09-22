@@ -1,32 +1,32 @@
-// initial opacity before render
+.ReactModal__Content {
+  border-radius: .4rem;
+}
+
 .ReactModalPortal > div {
   opacity: 0;
 }
 
-// transition time of the modal overlay
 .ReactModalPortal .ReactModal__Overlay {
   align-items: center;
-  transition: opacity 200ms ease-in-out;
   display: flex;
   justify-content: center;
+  transition: opacity 200ms ease-in-out;
 }
 
-// the opacity of the modal after it is opened /rendered
 .ReactModalPortal .ReactModal__Overlay--after-open {
-  opacity:1;
+  opacity: 1;
 }
 
-// modal is transitioned out smoothly by delaying its opacity by 200ms
 .ReactModalPortal .ReactModal__Overlay--before-close {
-  opacity:0;
+  opacity: 0;
 }
 
 .modal {
-  background: #333;
+  background: $light-blue;
   color: white;
-  padding: $xl-size;
   max-width: 30rem;
   outline: none;
+  padding: $l-size;
   text-align: center;
 }
 
@@ -35,8 +35,8 @@
 }
 
 .modal__body {
-  margin: 0 0 $l-size 0;
   font-size: 2rem;
   font-weight: 300;
+  margin: 0 0 $m-size 0;
   word-break: break-all;
 }

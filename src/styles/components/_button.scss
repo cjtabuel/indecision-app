@@ -1,39 +1,44 @@
-// big button
-.big-btn {
-  color: $pearl-white;
-  background: #c82333;
-  border-color: #bd2130;
-  width: 100%;
-  border-radius: .25rem;
-  font-weight: 400;
-  text-align: center;
+// big btn
+.big-button {
+  background: $purple;
+  border: none;
+  border-radius: .4rem;
+  border-bottom: .6rem solid darken($purple, 10%);
+  color: white;
+  font-weight: bold;
+  font-size: $s-size;
   margin-bottom: $m-size;
-  padding: 1.4rem;
+  padding: 2.4rem;
+  width: 100%;
 }
 
-.big-btn:disabled {
+.big-button:disabled {
   opacity: .5;
 }
 
-// add option button
-.btn {
-  color: #fff;
-  background: #c82333;
-  border-color: #bd2130;
+@media (min-width: $desktop-breakpoint) {
+  .big-button {
+    font-size: $m-size;
+    margin-bottom: $xl-size;
+  }
+}
+
+// btn
+.button {
+  background: $purple;
+  border: none;
+  border-radius: .4rem;
+  border-bottom: .3rem solid darken($purple, 10%);
+  color: white;
   font-weight: 500;
-  border-radius: .25rem;
   padding: $s-size;
 }
 
-.btn--link {
+.button--link {
   background: none;
   border: none;
-  color: $pearl-white;
+  color: $off-white;
   padding: 0;
+  font-size: 1.4rem;
 }
 
-@media (min-width: $desktop-breakpoint) {
-  .big-btn {
-    margin-bottom: $l-size;
-  }
-}

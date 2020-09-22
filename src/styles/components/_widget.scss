@@ -1,6 +1,23 @@
+// widget
+.widget {
+  background: $light-blue;
+  margin-bottom: $xl-size;
+}
+
+.widget__message {
+  border-bottom: 1px solid lighten($light-blue, 10%);
+  color: $off-white;
+  margin: 0;
+  padding: $l-size;
+  text-align: center;
+}
+
+// widget header
 .widget-header {
-  background: $dark;
-  color: $pearl-white;
+  background: $blue;
+  border-top-left-radius: .4rem;
+  border-top-right-radius: .4rem;
+  color: $off-white;
   padding: $m-size;
   display: flex;
   justify-content: space-between;
@@ -8,17 +25,4 @@
 
 .widget-header__title {
   margin: 0;
-}
-
-.widget {
-  background: $light-blue;
-  // padding: $m-size;
-}
-
-.widget__message {
-  margin: 0;
-  padding: $l-size;
-  text-align: center;
-  color: $pearl-white;
-  border-bottom: 1px solid lighten($light-blue, 10%); 
 }
